@@ -1,0 +1,29 @@
+<%include ../partials/header%>
+<div class="container">
+
+    <h1 class="display-3"><%= detail.subject_id %>&nbsp;<b><%= detail.subject_name %></b></h1>
+
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Major</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% detail.students.forEach(function(s){ %>
+                <tr>
+                    <th scope="row"><%= s.sid %></th>
+                    <td><%= s.name %></td>
+                    <td><%= s.major %></td>
+
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<%include ../partials/footer%>
