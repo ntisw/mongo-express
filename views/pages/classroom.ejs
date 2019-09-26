@@ -11,6 +11,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Room</th>
                     <th scope="col">Schedule</th>
+                    <th scope="col">Action</th>                    
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +25,7 @@
                     <td><%= cls.subject_name %></td>
                     <td><%= cls.room %></td>
                     <td><%= cls.schedule%></td>
+                    <td><a class="btn btn-primary" href="/classedit/<%= cls.subject_id%>" role="button">Edit</a></td>                    
                 </tr>
                 <% }); %>
             </tbody>

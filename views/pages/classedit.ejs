@@ -1,0 +1,27 @@
+<%include ../partials/header%>
+<div class="container">
+    <form action="/classsave" method="post">
+
+        <h1 class="display-3">Edit <%= detail.subject_id %>&nbsp; <%= detail.subject_name %></h1>
+        <div class="form-group">
+          <label for="sub_id">ID</label>
+          <input type="text"
+            class="form-control" name="id" id="sub_id" aria-describedby="helpId1" value="<%=detail.subject_id%>">
+          <small id="helpId1" class="form-text text-muted">Help text</small>
+        </div>
+        <div class="form-group">
+            <label for="sub_name">Name</label>
+            <input type="text"
+              class="form-control" name="name" id="sub_name" aria-describedby="helpId2" value="<%=detail.subject_name%>">
+            <small id="helpId2" class="form-text text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="sub_room">Room </label>
+            <input type="text"
+              class="form-control" name="room" id="room" aria-describedby="helpId" value="<%=detail.room%>">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<%include ../partials/footer%>
